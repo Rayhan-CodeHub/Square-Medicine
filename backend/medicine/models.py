@@ -9,7 +9,7 @@ class MedicineModel(models.Model):
     trade_name = models.CharField(max_length=30)
     price = models.PositiveSmallIntegerField()
     mg = models.PositiveSmallIntegerField()
-    image = models.ImageField(upload_to="picture/uploads/%Y/%m/%d")
+    image = models.ImageField(upload_to="picture/uploads/%Y/%m/%d", null=True, blank=True)
 
     class Meta:
         verbose_name = "Medicine"
